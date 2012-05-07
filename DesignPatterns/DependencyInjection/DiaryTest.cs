@@ -1,9 +1,9 @@
-﻿using Moq;
+using JonSkeetDesignPatterns.DependencyInjection;
+using Moq;
 using NUnit.Framework;
 using NodaTime;
 
-
-namespace JonSkeetDesignPatterns
+namespace DesignPatterns.DependencyInjection
 {
     [TestFixture]
     public class DiaryTest
@@ -16,6 +16,27 @@ namespace JonSkeetDesignPatterns
 
             string today = diary.FormatToday();
             Assert.AreEqual("1970-01-01", today);
+        }
+
+        [Test]
+        public void Main()
+        {
+            var injector = new CustomInjector();
+            var presenter = injector.CreateDiaryPresenter();
+            presenter.Start();
+        }
+
+        [Test]
+        public void Main_With_Generic_Injector()
+        {
+            var injector = new Injector();
+            injector.Bind<IClock, SystemClock>();
+            injector.Bind<DateTimeZone>(DateTimeZone.GetSystemDefault());
+            injector.Bind<Instant>(Instant.FromUtc(2000, 1,1,0,0,0));
+            injector.Bind<CalendarSystem>(CalendarSystem.Iso);
+            
+            var presenter = injector.Resolve<DiaryPresenter>();
+            presenter.Start();
         }
 
         /*

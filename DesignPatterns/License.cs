@@ -1,6 +1,6 @@
 ﻿using NodaTime;
 
-namespace DependencyInjection
+namespace DesignPatterns
 {
     public class License
     {

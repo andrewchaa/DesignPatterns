@@ -8,8 +8,8 @@
     <ProjectGuid>{842D6E96-AF95-400C-AAFE-F62AAF033AE0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>JonSkeetDesignPatterns</RootNamespace>
-    <AssemblyName>JonSkeetDesignPatterns</AssemblyName>
+    <RootNamespace>DesignPatterns</RootNamespace>
+    <AssemblyName>DesignPatterns</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -50,8 +50,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Diary.cs" />
-    <Compile Include="DiaryTest.cs" />
+    <Compile Include="DependencyInjection\Diary.cs" />
+    <Compile Include="DependencyInjection\DiaryPresenter.cs" />
+    <Compile Include="DependencyInjection\DiaryTest.cs" />
+    <Compile Include="DependencyInjection\Injector.cs" />
+    <Compile Include="DependencyInjection\CustomInjector.cs" />
     <Compile Include="License.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

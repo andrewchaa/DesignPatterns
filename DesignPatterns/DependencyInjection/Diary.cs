@@ -1,8 +1,7 @@
-﻿using System;
 using NodaTime;
 using NodaTime.Text;
 
-namespace JonSkeetDesignPatterns
+namespace JonSkeetDesignPatterns.DependencyInjection
 {
     public class Diary
     {
