@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Moq">
+      <HintPath>..\packages\Moq.4.0.10827\lib\NET40\Moq.dll</HintPath>
+    </Reference>
     <Reference Include="NodaTime">
       <HintPath>..\packages\NodaTime.0.9.0\lib\net35-Client\NodaTime.dll</HintPath>
     </Reference>
@@ -47,6 +50,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Diary.cs" />
+    <Compile Include="DiaryTest.cs" />
     <Compile Include="License.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

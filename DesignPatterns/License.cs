@@ -1,6 +1,6 @@
 ﻿using NodaTime;
 
-namespace JonSkeetDesignPatterns
+namespace DependencyInjection
 {
     public class License
     {
